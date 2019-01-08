@@ -51,6 +51,7 @@ const images = {
   babyGuitarist: require('../assets/baby-guitarist.gif'),
   bassToss: require('../assets/bass-toss.gif'),
   brianMay: require('../assets/brian-may.gif'),
+  glory: require('../assets/glory.gif'),
   brendanPolyglot: require('../assets/brendan-polyglot.png')
 };
 
@@ -578,6 +579,7 @@ export default class Presentation extends React.Component {
           <Heading size={1} textColor="primary">
             Thank you!
           </Heading>
+          <Image src={images.glory} margin="15px auto" height="400px" />
         </Slide>
       </Deck>
     );
