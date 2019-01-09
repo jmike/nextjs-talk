@@ -52,7 +52,16 @@ const images = {
   bassToss: require('../assets/bass-toss.gif'),
   brianMay: require('../assets/brian-may.gif'),
   glory: require('../assets/glory.gif'),
-  brendanPolyglot: require('../assets/brendan-polyglot.png')
+  zeit: require('../assets/zeit.png'),
+  brendanPolyglot: require('../assets/brendan-polyglot.png'),
+  rauchg: require('../assets/rauchg.png'),
+  timneutkens: require('../assets/timneutkens.jpg'),
+  nkzawa: require('../assets/nkzawa.jpg'),
+  pedal: require('../assets/pedal.gif'),
+  nike: require('../assets/nike.png'),
+  npm: require('../assets/npm.png'),
+  docker: require('../assets/docker.png'),
+  elton: require('../assets/elton-john.png')
 };
 
 // Require CSS
@@ -171,32 +180,133 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
-        <Slide id="part1-intro" transition={['fade']} bgColor="primary">
-          <Heading size={6} caps textColor="secondary" margin="0 auto 60px">
-            Part A: The mechanics of
-          </Heading>
-          <Image src={images.nextLogo} width={300} />
+        <Slide id="nextjs-history" transition={['fade']} bgColor="primary">
+          <Image src={images.nextLogo} width={200} />
+          <Appear>
+            <Text margin="30px 0" textColor="secondary">
+              Released on Oct 25, 2016 (<Code backgroundColor="#fff">v.1.0.0</Code>)
+            </Text>
+          </Appear>
+          <Appear>
+            <div>
+              <Text margin="30px 0 5px" textColor="secondary">
+                Developed by{' '}
+                <Image
+                  src={images.zeit}
+                  height={35}
+                  margin="0"
+                  style={{ display: 'inline-block' }}
+                />
+              </Text>
+              <Layout>
+                <Fill>
+                  <div
+                    style={{
+                      width: '120px',
+                      height: '120px',
+                      borderRadius: '50%',
+                      overflow: 'hidden',
+                      marginLeft: 'auto',
+                      marginRight: '30px'
+                    }}
+                  >
+                    <Image src={images.timneutkens} width={120} margin="0" />
+                  </div>
+                </Fill>
+                <Fit>
+                  <div
+                    style={{
+                      width: '120px',
+                      height: '120px',
+                      borderRadius: '50%',
+                      overflow: 'hidden',
+                      marginLeft: '30px',
+                      marginRight: '30px'
+                    }}
+                  >
+                    <Image src={images.nkzawa} width={120} margin="0" />
+                  </div>
+                </Fit>
+                <Fill>
+                  <div
+                    style={{
+                      width: '120px',
+                      height: '120px',
+                      borderRadius: '50%',
+                      overflow: 'hidden',
+                      marginLeft: '30px',
+                      marginRight: 'auto'
+                    }}
+                  >
+                    <Image src={images.rauchg} width={120} margin="0" />
+                  </div>
+                </Fill>
+              </Layout>
+            </div>
+          </Appear>
+          <Appear>
+            <Text margin="30px 0" textColor="secondary">
+              Licensed under <Code>MIT</Code>
+            </Text>
+          </Appear>
+          <Appear>
+            <div>
+              <Text margin="30px 0 5px" textColor="secondary">
+                Used by
+              </Text>
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+              >
+                <div style={{ margin: '0 15px' }}>
+                  <Image src={images.nike} width={130} margin="0" />
+                </div>
+                <div style={{ margin: '0 15px' }}>
+                  <Image src={images.npm} width={120} margin="0" />
+                </div>
+                <div style={{ margin: '0 15px' }}>
+                  <Image src={images.elton} width={140} margin="0" />
+                </div>
+                <div style={{ margin: '0 15px' }}>
+                  <Image src={images.docker} width={150} margin="0" />
+                </div>
+              </div>
+            </div>
+          </Appear>
         </Slide>
 
         <Slide id="next-inspiration" transition={['fade']} bgColor="secondary">
           <Image src={images.tweet1} width={520} />
         </Slide>
 
-        <Slide id="next-ingridients" transition={['fade']} bgColor="primary">
-          <Heading size={6} caps fit lineHeight={1.3} margin="0 0 30px">
+        <Slide id="next-key-technologies" transition={['fade']} bgColor="secondary">
+          <Heading size={6} caps fit lineHeight={1.3} margin="0 0 30px" textColor="primary">
             3 key technologies of next.js
           </Heading>
+          <br />
           <Layout>
-            <Fit>foo</Fit>
+            <Fit>
+              <div
+                style={{
+                  width: '250px',
+                  marginRight: '30px'
+                }}
+              >
+                <Image src={images.pedal} width={250} margin="0" />
+              </div>
+            </Fit>
             <Fill>
               <List ordered>
-                <ListItem margin="70px 0 15px" textColor="tertiary">
-                  SSR
+                <ListItem margin="15px 0" textColor="primary">
+                  Server-Side Rendering (SSR)
                 </ListItem>
-                <ListItem margin="15px 0" textColor="tertiary">
+                <ListItem margin="15px 0" textColor="primary">
                   React
                 </ListItem>
-                <ListItem margin="15px 0" textColor="tertiary">
+                <ListItem margin="15px 0" textColor="primary">
                   Convention over Configuration
                 </ListItem>
               </List>
@@ -209,7 +319,7 @@ export default class Presentation extends React.Component {
             Key Technology #1
           </Text>
           <Heading size={4} textColor="primary">
-            SSR
+            Server-Side Rendering (SSR)
           </Heading>
         </Slide>
 
